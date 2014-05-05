@@ -97,7 +97,7 @@ static __inline void list_del(struct list_head *prev, struct list_head *next)
   * Use this for code that knows the list to be very short (empty
   * or 1 entry) most of the time.
  */
-#define __list_for_each(pos, head) \
+#define list_for_each(pos, head) \
         for (pos = (head)->next; pos != (head); pos = pos->next)
 /**
   * list_for_each_prev   -       iterate over a list backwards
