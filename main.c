@@ -28,7 +28,7 @@ void printToCSV(FILE *f, struct list_head *head)
 	struct list_head *pos;
 	struct nlist *temp;
 
-	__list_for_each(pos, head)
+	list_for_each(pos, head)
 	{
 		//pointer, type , member	
 		temp = (struct nlist *)container_of(pos, struct nlist, list);
